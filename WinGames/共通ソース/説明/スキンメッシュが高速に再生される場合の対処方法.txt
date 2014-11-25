@@ -1,0 +1,22 @@
+
+○スキンメッシュのアニメーションが高速に再生される場合の対処方法
+
+　ライトウェーブを用いてＸファイルを作成している場合、
+　Export DirectX というプラグインを使用する。
+　その際、TimeScale を８０にしましょう。
+
+○何らかの理由で元データを消失してしまった場合は
+　Ｘファイルを開き、以下を追加する。
+
+	template AnimTicksPerSecond {
+	<9E415A43-7BA6-4a73-8743-B73D47E88476>
+	DWORD AnimTicksPerSecond;
+	}
+
+	AnimTicksPerSecond{
+	1;
+	}
+
+すでに存在する場合、または追加しても高速に再生される場合は
+AnimTicksPerSecondの数値を大きくしてください。
+

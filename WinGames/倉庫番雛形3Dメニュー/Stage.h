@@ -1,0 +1,1 @@
+extern	char		chStage[][MAP_SIZE + 2 + 1];
